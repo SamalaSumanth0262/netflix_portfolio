@@ -1,0 +1,182 @@
+.highlights-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 9rem 1.5rem 4rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0, 0, 1, 0.9) 10%, rgba(20, 20, 20, 0.9) 100%);
+  color: #fff;
+}
+
+/* KPI row of stat tiles */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 3rem;
+}
+
+.stat-tile {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: highlightFadeIn 0.6s forwards ease-out;
+  animation-delay: var(--delay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.35);
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #b3b3b3;
+}
+
+.highlights-section-title {
+  font-size: 1.8rem;
+  color: #e6e6e6;
+  margin: 1rem 0 1.5rem;
+  border-bottom: 2px solid #e50914;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+/* Impact cards */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 3rem;
+}
+
+.impact-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: highlightFadeIn 0.6s forwards ease-out;
+  animation-delay: var(--delay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.35);
+}
+
+.impact-icon {
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 0.75rem;
+}
+
+.impact-metric {
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+
+.impact-detail {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Career journey */
+.journey-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 3rem;
+}
+
+.journey-card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: highlightFadeIn 0.6s forwards ease-out;
+  animation-delay: var(--delay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+}
+
+.journey-icon {
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 0.5rem;
+}
+
+.journey-company {
+  font-size: 1.05rem;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.journey-role {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  margin: 0 0 0.5rem;
+}
+
+.journey-period {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Compliance / tooling badges */
+.badge-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.compliance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  color: #e6e6e6;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+}
+
+@keyframes highlightFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,9 +1,10 @@
 // queries/getContactMe.ts
 import { ContactMe } from '../types';
+import headshot from '../images/headshot.png';
 
 export async function getContactMe(): Promise<ContactMe> {
   return {
-    profilePicture: { url: '' }, // PLACEHOLDER: Add profile picture URL
+    profilePicture: { url: headshot },
     name: 'Oluwapelumi Adenikinju',
     title: 'Cloud Engineer / Solutions Architect',
     summary:

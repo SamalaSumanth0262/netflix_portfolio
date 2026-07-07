@@ -44,33 +44,29 @@
   transform: scale(1.1);
 }
 
-.overlay {
+.top-picks-row .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 70%);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.pick-card:hover .overlay {
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 12px 14px;
   opacity: 1;
 }
 
-.pick-label {
+.top-picks-row .pick-label {
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.pick-label:hover {
- color: rgb(153, 80, 80);
+.top-picks-row .pick-card:hover .pick-label {
+  color: #e50914;
 }
 
 /* Animations */
